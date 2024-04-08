@@ -212,8 +212,8 @@ class _MusicPlayerState extends State<MusicPlayer> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       color: Colors.black,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
@@ -239,8 +239,22 @@ class _MusicPlayerState extends State<MusicPlayer> {
               ),
             ],
           ),
+          Row(
+            children: [
+              Icon(
+                Icons.favorite_border,
+                color: Colors.white,
+              ),
+              SizedBox(width: 10.0),
+              Icon(
+                Icons.pause_presentation,
+                color: Colors.white,
+              ),
+            ],
+          ),
         ],
       ),
     );
   }
+
 }
